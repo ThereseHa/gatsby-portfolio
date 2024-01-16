@@ -13,10 +13,28 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby ITHS`,
-    description: `Enkel starter template för ITHS-studenter`,
-    author: `Håkan Gleissman`,
+    title: `Therese Portfolio`,
+    description: `Mitt portfolio`,
+    author: `Therese Haapanen`,
     siteUrl: `http://dummy-site.com`,
+    menuLinks: [
+      {
+        name: `Home`,
+        link: `/`,
+      },
+      {
+        name: `Portfolio`,
+        link: `/portfolio`,
+      },
+      {
+        name: `Contact`,
+        link: `/contact`,
+      },
+      {
+        name: `About`,
+        link: `/about`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,

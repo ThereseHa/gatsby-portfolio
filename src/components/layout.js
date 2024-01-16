@@ -1,15 +1,16 @@
 import * as React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/style.css';
-import {Link} from "gatsby";
+
+import "../css/style.css"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => (
-    <>
-      <header><Link to="/">Gatsby ITHS-starter</Link></header>
-      <main>{children}</main>
-      <footer>Footer</footer>
-    </>
-  )
-
+  <>
+    <header></header>
+    <Navbar /> {Navbar}
+    <main>{children}</main>
+    <Footer></Footer>
+  </>
+)
 
 export default Layout
