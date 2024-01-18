@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Seo from "../components/seo"
 
 const IndexPage = ({ data }) => {
   const { title, presentationText, image } = data.contentfulHomePage
@@ -60,5 +61,5 @@ export const query = graphql`
     }
   }
 `
-
+export const Head = () => <Seo title="Home" />
 export default IndexPage

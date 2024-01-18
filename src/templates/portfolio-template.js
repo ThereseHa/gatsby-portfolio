@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -12,7 +12,9 @@ const PortfolioTemplate = ({ data }) => {
       <div className="container my-5">
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <h1 className="text-center">{project.title}</h1>
+            <h1 className="text-center" style={{ fontWeight: "bold" }}>
+              {project.title}
+            </h1>
             {image && (
               <div className="text-center mb-3">
                 <GatsbyImage
@@ -24,6 +26,12 @@ const PortfolioTemplate = ({ data }) => {
             )}
             <p>{project.description.description}</p>
             {/* Add additional project information with Bootstrap styling */}
+            {/* Back to Portfolio button */}
+            <div className="text-center">
+              <Link to="/portfolio" className="btn btn-dark">
+                Back to Portfolio
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +48,6 @@ export const query = graphql`
       }
       heroImage {
         gatsbyImageData(
-          width: 400
           height: 400
           placeholder: BLURRED
           formats: [AUTO, WEBP]

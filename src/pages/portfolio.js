@@ -25,7 +25,12 @@ const PortfolioPage = ({ data }) => {
                   to={`/portfolio/${node.slug}`}
                   className="text-decoration-none"
                 >
-                  <h2 className="h4 text-dark">{node.title}</h2>
+                  <h2
+                    className="h4 text-dark"
+                    style={{ fontWeight: "bold", marginTop: "50px" }}
+                  >
+                    {node.title}
+                  </h2>
                 </Link>
                 <GatsbyImage
                   alt={node.title}
@@ -58,7 +63,6 @@ export const query = graphql`
           }
           heroImage {
             gatsbyImageData(
-              width: 400
               height: 400
               placeholder: BLURRED
               formats: [AUTO, WEBP]

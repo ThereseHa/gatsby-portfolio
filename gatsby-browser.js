@@ -7,14 +7,13 @@
 // You can delete this file if you're not using it
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/css/bootstrap.min.css"
 
 // gatsby-browser.js
-import React from "react"
-import "./src/css/style.css" // Import your global styles
+
+import "./src/css/style.css"
 
 export const onClientEntry = async () => {
-  // Load your fonts dynamically
+  // Loading the fonts dynamically
   const link = document.createElement("link")
   link.href =
     "https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"

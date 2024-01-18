@@ -14,7 +14,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Therese Portfolio`,
-    description: `Mitt portfolio`,
+    description: `Therese är en frontend-utvecklare och detta är hennes portfolio.`,
     author: `Therese Haapanen`,
     siteUrl: `http://dummy-site.com`,
     menuLinks: [

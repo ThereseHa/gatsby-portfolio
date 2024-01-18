@@ -1,7 +1,7 @@
 // src/pages/about.js
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 
@@ -16,7 +16,6 @@ const ContactPage = ({ data }) => {
         const { url, description } = node.data.target.fields.file["en-US"]
         return <img src={url} alt={description} />
       },
-      // Add more renderers for other embedded types as needed
     },
   }
 
