@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Seo from "../components/seo"
+import { useMetadata } from "../hooks/useMetaData"
+import { Helmet } from "react-helmet"
 
 const IndexPage = ({ data }) => {
   const { title, presentationText, image } = data.contentfulHomePage
@@ -25,9 +26,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content="This is my homepage" />
+      </Helmet>
       <div className="text-center p-4">
-        {" "}
-        {/* Centering content with padding */}
         <h1>{title}</h1>
         <div style={{ maxWidth: "800px", margin: "auto" }}>
           {richTextComponents}
@@ -61,5 +64,5 @@ export const query = graphql`
     }
   }
 `
-export const Head = () => <Seo title="Home" />
+
 export default IndexPage
